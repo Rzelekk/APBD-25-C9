@@ -23,9 +23,10 @@ public partial class ApbdContext : DbContext
     public virtual DbSet<Country> Countries { get; set; }
 
     public virtual DbSet<Trip> Trips { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Name=ConnectionStrings:Default");
+    
+    //
+    // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //     => optionsBuilder.UseSqlServer("Name=ConnectionStrings:Default");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
